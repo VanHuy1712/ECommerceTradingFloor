@@ -1,4 +1,4 @@
-from .models import Product, User, Comment, Payments, Shop
+from .models import Product, User, Comment, Payments, Shop, InfoSP
 from rest_framework import serializers
 
 
@@ -11,6 +11,12 @@ class ProductSerializer(serializers.ModelSerializer):
 class ShopSerializer(serializers.ModelSerializer):
     class Meta:
         model = Shop
+        fields = '__all__'
+
+
+class InfoSPSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = InfoSP
         fields = '__all__'
 
 
